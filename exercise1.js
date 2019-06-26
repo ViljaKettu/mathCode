@@ -13,14 +13,11 @@ window.onload = function()
         let region = new Path2D();
         region.beginPath();
         region.moveTo(Math.random()*width, Math.random()*height);
-        for(var j = 0; j<5; j++)
-        {
+
             
-            region.lineTo(Math.random()*width, Math.random() *height);
+        region.lineTo(Math.random()*width, Math.random() *height);
+        region.lineTo(Math.random()*width, Math.random() *height);
             
-            //region.stroke();
-    
-        }
         
 
         
