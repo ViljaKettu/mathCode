@@ -11,17 +11,17 @@ window.onload = function()
     for(var i= 0; i<10; i++)
     {
         
-        context.beginPath();
-        context.moveTo(Math.random()*width, Math.random()*height);
-         
-        context.lineTo(Math.random()*width, Math.random() *height);
-        context.lineTo(Math.random()*width, Math.random() *height);
-        context.lineTo(Math.random()*width, Math.random() *height);
-            //region.stroke()
-
+        let region = new Path2D();
+        region.moveTo(30, 90);
+        region.lineTo(110, 20);
+        region.lineTo(240, 130);
+        region.lineTo(60, 130);
+        region.lineTo(190, 20);
+        region.lineTo(270, 90);
+        region.closePath();
 
         context.fillstyle = 'green';
-        context.fill();
+        context.fill(region, 'evenodd');
     }
    
 };
