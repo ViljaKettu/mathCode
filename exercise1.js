@@ -8,9 +8,11 @@ window.onload = function()
     for(var i= 0; i<30; i++)
     {
         context.beginPath();
-        context.moveTo(Math.random()*width, Math.random()*height);           
-        context.lineTo(Math.random()*width, Math.random() *height);
-        context.lineTo(Math.random()*width, Math.random() *height);
+        var x=Math.random()*width;
+        var y=Math.random()*height;
+        context.moveTo(x, y);           
+        context.lineTo(x+30, y+10);
+        context.lineTo(x+5, y-15);
 
         var letters = '0123456789ABCDEF';
         var color = '#';
