@@ -28,7 +28,7 @@ window.onload = function()
         color += letters[Math.floor(Math.random() * 16)];
         }
 
-        context.fillstyle = color;
+        context.fillstyle = 'color';
         context.fill(region, 'evenodd');
     }
    
