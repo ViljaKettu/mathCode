@@ -7,11 +7,22 @@ window.onload = function()
 
     for(var i= 0; i<100; i++)
     {
+        var colors = [];
+
         context.beginPath();
         context.moveTo(Math.random()*width, Math.random()*height);           
         context.lineTo(Math.random()*width, Math.random() *height);
         context.lineTo(Math.random()*width, Math.random() *height);
 
+        var letters = '0123456789ABCDEF';
+        var color = '#';
+        for (var i = 0; i < 6; i++) 
+        {
+        color += letters[Math.floor(Math.random() * 16)];
+        }
+
+        console.log(color);
+        
         context.fillStyle = 'green';
         context.fill();
     }
