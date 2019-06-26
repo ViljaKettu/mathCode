@@ -10,26 +10,18 @@ window.onload = function()
 
     for(var i= 0; i<10; i++)
     {
-        let region = new Path2D();
-        region.beginPath();
-        region.moveTo(Math.random()*width, Math.random()*height);
-        for(var j = 0; j<5; j++)
-        {
-            
-            region.lineTo(Math.random()*width, Math.random() *height);
-            
-            //region.stroke();
-    
-        }
-        region.closePath();
-
         
-        for (var k = 0; k < 6; k++) {
-        color += letters[Math.floor(Math.random() * 16)];
-        }
+        context.beginPath();
+        context.moveTo(Math.random()*width, Math.random()*height);
+         
+        context.lineTo(Math.random()*width, Math.random() *height);
+        context.lineTo(Math.random()*width, Math.random() *height);
+        context.lineTo(Math.random()*width, Math.random() *height);
+            //region.stroke()
+
 
         context.fillstyle = 'green';
-        context.fill(region, 'evenodd');
+        context.fill();
     }
    
 };
