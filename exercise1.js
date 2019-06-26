@@ -11,8 +11,8 @@ window.onload = function()
         var x=Math.random()*width;
         var y=Math.random()*height;
         context.moveTo(x, y);           
-        context.lineTo(x+30, y+10);
-        context.lineTo(x+5, y-15);
+        context.lineTo(x+Math.random()*30, y+Math.random()*30);
+        context.lineTo(x+Math.random()*30, y+Math.random()*30);
 
         var letters = '0123456789ABCDEF';
         var color = '#';
