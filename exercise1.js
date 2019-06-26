@@ -6,7 +6,7 @@ window.onload = function()
         height = canvas.height = window.innerHeight,
         minSize = 40, maxSize=100;
 
-    for(var i= 0; i<30; i++)
+    for(var i= 0; i<100; i++)
     {
         context.beginPath();
         var x=Math.random()*width;
