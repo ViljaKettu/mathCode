@@ -9,5 +9,7 @@ window.onload = function()
     {
         context.beginPath();
         context.moveTo(Math.random()*width, Math.random()*height);
+        context.lineTo(Math.random()*width, Math.random() *height);
+        context.stroke();
     }
 };
