@@ -1,7 +1,5 @@
 window.onload = function()
 {
-    var letters = '0123456789ABCDEF';
-    var color = '#';
     var canvas = document.getElementById("canvas"),
         context = canvas.getContext("2d"),
         width = canvas.width = window.innerWidth,
@@ -9,14 +7,13 @@ window.onload = function()
 
     for(var i= 0; i<10; i++)
     {
-        var colors = [];
-
         context.beginPath();
         context.moveTo(Math.random()*width, Math.random()*height);           
         context.lineTo(Math.random()*width, Math.random() *height);
         context.lineTo(Math.random()*width, Math.random() *height);
 
-       
+        var letters = '0123456789ABCDEF';
+        var color = '#';
         for (var j = 0; j < 6; j++) 
         {
         color += letters[Math.floor(Math.random() * 16)];
