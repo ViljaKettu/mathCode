@@ -5,7 +5,7 @@ window.onload = function()
         width = canvas.width = window.innerWidth,
         height = canvas.height = window.innerHeight;
 
-    for(var i= 0; i<10; i++)
+    for(var i= 0; i<100; i++)
     {
         context.beginPath();
         context.moveTo(Math.random()*width, Math.random()*height);           
