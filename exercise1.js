@@ -10,9 +10,12 @@ window.onload = function()
         context.beginPath();
         var x=Math.random()*width;
         var y=Math.random()*height;
+        var size = Math.floor(Math.random()*50) +1;
+        size *= Math.floor(Math.random()*2) == 1 ? 1 : -1;
+
         context.moveTo(x, y);           
-        context.lineTo(x+Math.random()*30, y+Math.random()*30);
-        context.lineTo(x+Math.random()*30, y+Math.random()*30);
+        context.lineTo(x+Math.random()*size, y+Math.random()*size);
+        context.lineTo(x+Math.random()*size, y+Math.random()*size);
 
         var letters = '0123456789ABCDEF';
         var color = '#';
