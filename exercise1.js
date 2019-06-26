@@ -23,7 +23,7 @@ window.onload = function()
 
         console.log(color);
         
-        context.fillStyle = 'green';
+        context.fillStyle = color;
         context.fill();
     }
    
