@@ -9,8 +9,8 @@ window.onload = function()
     {
         context.beginPath();
         context.moveTo(Math.random()*width, Math.random()*height);           
-        context.lineTo(Math.random()*width, Math.random() *height);
-        context.lineTo(Math.random()*width, Math.random() *height);
+        context.lineTo(Math.random()*10, Math.random() *10);
+        context.lineTo(Math.random()*10, Math.random() *10);
 
         var letters = '0123456789ABCDEF';
         var color = '#';
