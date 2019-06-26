@@ -11,8 +11,8 @@ window.onload = function()
         context.beginPath();
         var x=Math.random()*width;
         var y=Math.random()*height;
-        var size = Math.floor(Math.random()*(maxSize-minSize)) +minSize;
-        size *= Math.floor(Math.random()*2) == 1 ? 1 : -1;
+        var size = Math.random()*(maxSize-minSize) +minSize;
+        //size *= Math.floor(Math.random()*2) == 1 ? 1 : -1;
 
         context.moveTo(x, y);           
         context.lineTo(x+Math.random()*size, y+Math.random()*size);
