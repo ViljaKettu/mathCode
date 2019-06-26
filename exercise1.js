@@ -9,7 +9,7 @@ window.onload = function()
     {
         context.beginPath();
         context.moveTo(Math.random()*10, Math.random()*10);           
-        context.lineTo(Math.random()*height, Math.random() *height);
+        context.lineTo(Math.random()*width, Math.random() *height);
         context.lineTo(Math.random()*10, Math.random() *10);
 
         var letters = '0123456789ABCDEF';
@@ -24,23 +24,5 @@ window.onload = function()
         context.fillStyle = color;
         context.fill();
     }
-    for(var i= 0; i<30; i++)
-    {
-        context.beginPath();
-        context.moveTo(Math.random()*-10, Math.random()*-10);           
-        context.lineTo(Math.random()*height, Math.random() *height);
-        context.lineTo(Math.random()*-10, Math.random() *-10);
-
-        var letters = '0123456789ABCDEF';
-        var color = '#';
-        for (var j = 0; j < 6; j++) 
-        {
-        color += letters[Math.floor(Math.random() * 16)];
-        }
-
-        console.log(color);
-        
-        context.fillStyle = color;
-        context.fill();
-    }
+   
 };
