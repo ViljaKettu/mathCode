@@ -4,7 +4,7 @@ window.onload = function()
         context = canvas.getContext("2d"),
         width = canvas.width = window.innerWidth,
         height = canvas.height = window.innerHeight,
-        minSize = 10, maxSize=50;
+        minSize = 40, maxSize=100;
 
     for(var i= 0; i<30; i++)
     {
