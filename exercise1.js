@@ -20,7 +20,7 @@ window.onload = function()
             color += letters[Math.floor(Math.random() * 16)];
         }
 
-        context.fillStyle = 'color';
+        context.fillStyle = 'green';
         context.fill();
     }
    
