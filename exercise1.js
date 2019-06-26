@@ -3,14 +3,15 @@ window.onload = function()
     var canvas = document.getElementById("canvas"),
         context = canvas.getContext("2d"),
         width = canvas.width = window.innerWidth,
-        height = canvas.height = window.innerHeight;
+        height = canvas.height = window.innerHeight,
+        minSize = 10, maxSize=50;
 
     for(var i= 0; i<30; i++)
     {
         context.beginPath();
         var x=Math.random()*width;
         var y=Math.random()*height;
-        var size = Math.floor(Math.random()*50) +1;
+        var size = Math.floor(Math.random()*(maxSize-minSize)) +minSize;
         size *= Math.floor(Math.random()*2) == 1 ? 1 : -1;
 
         context.moveTo(x, y);           
