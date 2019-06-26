@@ -7,32 +7,12 @@ window.onload = function()
 
     for(var i= 0; i<30; i++)
     {
+        var x = Math.random()*width,
+            y = Math.random()*height;
         context.beginPath();
-        context.moveTo(Math.random()*width, Math.random()*height);           
-        context.lineTo(Math.random()*width, Math.random() *height);
-        context.lineTo(Math.random()*width, Math.random() *height);
-
-        var letters = '0123456789ABCDEF';
-        var color = '#';
-        for (var j = 0; j < 6; j++) 
-        {
-        color += letters[Math.floor(Math.random() * 16)];
-        }
-
-        console.log(color);
-        
-        context.fillStyle = color;
-        context.fill();
-    }
-
-    for(var i= 0; i<30; i++)
-    {
-        context.beginPath();
-        context.moveTo(Math.random()*width, Math.random()*height);           
-        context.lineTo(Math.random()*width, Math.random() *height);
-        context.lineTo(Math.random()*width, Math.random() *height);
-        context.lineTo(Math.random()*width, Math.random() *height);
-
+        context.moveTo(x, y);           
+        context.lineTo(x+Math.random*20, y+Math.random() *20);
+        context.lineTo(x+Math.random()*20, y + Math.random() *20);
 
         var letters = '0123456789ABCDEF';
         var color = '#';
