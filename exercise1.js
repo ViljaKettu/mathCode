@@ -9,19 +9,19 @@ window.onload = function()
 
     for(var i= 0; i<10; i++)
     {
-        
-        context.beginPath();
+        let region = new Path2D();
+        region.beginPath();
         for(var j = 0; j<5; j++)
         {
-            context.moveTo(Math.random()*width, Math.random()*height);
-            context.lineTo(Math.random()*width, Math.random() *height);
-            context.stroke();
+            region.moveTo(Math.random()*width, Math.random()*height);
+            region.lineTo(Math.random()*width, Math.random() *height);
+            region.stroke();
     
         }
-        context.closePath();
+        region.closePath();
 
         context.fillstyle = getRandomColor();
-        context.fill();
+        context.fill(region, 'evenodd');
     }
    
 };
@@ -34,4 +34,4 @@ function getRandomColor()
     color += letters[Math.floor(Math.random() * 16)];
     }
     return color;
-}
+};
