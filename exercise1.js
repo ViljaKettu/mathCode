@@ -1,5 +1,8 @@
 window.onload = function()
 {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+
     var canvas = document.getElementById("canvas"),
         context = canvas.getContext("2d"),
         width = canvas.width = window.innerWidth,
