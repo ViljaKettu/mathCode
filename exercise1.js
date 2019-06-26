@@ -8,13 +8,12 @@ window.onload = function()
 
     for(var i= 0; i<10; i++)
     {
-        let region = new Path2D();
-        region.beginPath();
-        region.moveTo(Math.random()*width, Math.random()*height);
+        context.beginPath();
+        context.moveTo(Math.random()*width, Math.random()*height);
 
             
-        region.lineTo(Math.random()*width, Math.random() *height);
-        region.lineTo(Math.random()*width, Math.random() *height);
+        context.lineTo(Math.random()*width, Math.random() *height);
+        context.lineTo(Math.random()*width, Math.random() *height);
 
         context.fillstyle = 'green';
         context.fill();
