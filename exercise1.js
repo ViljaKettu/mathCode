@@ -15,6 +15,11 @@ window.onload = function()
         context.lineTo(Math.random()*width, Math.random() *height);
         context.lineTo(Math.random()*width, Math.random() *height);
 
+        for(var j = 0; j<6;j++)
+        {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+
         context.fillStyle = 'green';
         context.fill();
     }
