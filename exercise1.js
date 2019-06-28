@@ -4,7 +4,7 @@ window.onload = function()
         context = canvas.getContext("2d"),
         width = canvas.width = window.innerWidth,
         height = canvas.height = window.innerHeight,
-        minSize, maxSize;
+        minSize, maxSize, rColor;
 
        
         DrawCircle();
@@ -40,7 +40,7 @@ window.onload = function()
 
                var rgbR = Math.floor((x/width) * 255),
                rgbG = Math.floor((y/height) * 255),
-               rgbB = Math.floor((Math.random() * width));
+               rgbB = Math.floor((Math.random() * 255));
 
                 context.fillStyle = 'rgb('+ rgbR + ',' + rgbG +',' + rgbB+')';
                 context.fill();
@@ -64,7 +64,7 @@ window.onload = function()
                 context.stroke();
                 
                 var rgbR = Math.floor((xCenter/width) * 255),
-                rgbG = Math.floor((Math.random() * width)),
+                rgbG = Math.floor((Math.random() * 255)),
                 rgbB = Math.floor((yCenter/height) * 255);
         
                 context.fillStyle = 'rgb('+ rgbR + ',' + rgbG +',' + rgbB+')';
@@ -96,7 +96,7 @@ window.onload = function()
                 context.closePath();
                 context.stroke();
 
-                var rgbR = Math.floor((Math.random() * width)),
+                var rgbR = Math.floor((Math.random() * 255)),
                 rgbG = Math.floor((xCenter/width) * 255),
                 rgbB = Math.floor((yCenter/height) * 255);
         
@@ -105,6 +105,9 @@ window.onload = function()
             }
         }
 
-
+        function RandomColor()
+        {
+            rColor = Math.floor((Math.random() * 255));
+        }
 };
 
