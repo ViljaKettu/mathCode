@@ -6,27 +6,13 @@ window.onload = function()
         height = canvas.height = window.innerHeight,
         minSize, maxSize;
 
-    for(var i= 0; i < 500; i++)
-    {
-        var xCenter=Math.random()*width;
-        var yCenter=Math.random()*height;
-        
-        minSize = 2;
-        maxSize = 15;    
+    DrawTriangle();
+    DrawCircle();
+    DrawPentagon();
+};
 
-        var size = Math.floor(Math.random()*(maxSize-minSize) +minSize);
-
-        context.beginPath();
-        context.arc(xCenter, yCenter, size, 0, 2*Math.PI)
-        context.stroke();
-        
-        var red;
-        red = Math.floor(Math.random()*255); 
-
-        context.fillStyle = 'rgb(' + red+ ', 0, 0)';
-        context.fill();
-    }
-
+function DrawTriangle()
+{
     for(var i= 0; i < 500; i++)
     {
         context.beginPath();
@@ -57,6 +43,34 @@ window.onload = function()
         context.fillStyle = 'rgb(0,' +green+',0)';
         context.fill();
     }
+};
+
+function DrawCircle()
+{
+    for(var i= 0; i < 500; i++)
+    {
+        var xCenter=Math.random()*width;
+        var yCenter=Math.random()*height;
+        
+        minSize = 2;
+        maxSize = 15;    
+
+        var size = Math.floor(Math.random()*(maxSize-minSize) +minSize);
+
+        context.beginPath();
+        context.arc(xCenter, yCenter, size, 0, 2*Math.PI)
+        context.stroke();
+        
+        var red;
+        red = Math.floor(Math.random()*255); 
+
+        context.fillStyle = 'rgb(' + red+ ', 0, 0)';
+        context.fill();
+    }
+};
+
+function DrawPentagon()
+{
     for(var i= 0; i < 500; i++)
     {
         var xCenter=Math.random()*width;
@@ -85,3 +99,4 @@ window.onload = function()
         context.fill();
     }
 };
+
