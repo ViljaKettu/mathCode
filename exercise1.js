@@ -4,30 +4,33 @@ window.onload = function()
         context = canvas.getContext("2d"),
         width = canvas.width = window.innerWidth,
         height = canvas.height = window.innerHeight,
-        minSize, maxSize, rColor;
+        minSize, maxSize, rColor, xCenter, yCenter;
+
 
         RandomColor();
+
         DrawCircle();
         DrawPentagon();
         DrawTriangle();
-
+        
         function DrawTriangle()
         {
             for(var i= 0; i < 500; i++)
             {
                 context.beginPath();
-                var x=Math.random()*width;
-                var y=Math.random()*height;
-        
+                
+                xCenter=Math.random()*width;
+                yCenter=Math.random()*(height*0.35);
+
                 minSize = 15;
                 maxSize = 50;
                 
                 var size = Math.floor(Math.random()*(maxSize-minSize) +minSize);
                 size *= Math.floor(Math.random()*2) == 1 ? 1 : -1;
         
-                context.moveTo(x, y);           
-                context.lineTo(x+Math.random()*size, y+Math.random()*size);
-                context.lineTo(x+Math.random()*size, y+Math.random()*size);
+                context.moveTo(xCenter, yCenter);           
+                context.lineTo(xCenter+Math.random()*size, yCenter+Math.random()*size);
+                context.lineTo(xCenter+Math.random()*size, yCenter+Math.random()*size);
         
                 //var letters = '0123456789ABCDEF';
                 //var color = '#';
@@ -38,46 +41,48 @@ window.onload = function()
         
                // console.log(color);
 
-               var rgbR = Math.floor((x/width) * 255),
-               rgbG = Math.floor((y/height) * 255),
+               var rgbR = Math.floor((xCenter/width) * 255),
+               rgbG = Math.floor((yCenter/height) * 255),
                rgbB = rColor;
 
-                context.fillStyle = 'rgb('+ rgbR + ',' + rgbG +',' + rgbB+')';
+               context.fillStyle = 'rgb('+ rgbR + ',' + rgbG +',' + rgbB+')';
                 context.fill();
             }
         }
         
         function DrawCircle()
         {
-            for(var i= 0; i < 500; i++)
-            {
-                var xCenter=Math.random()*width;
-                var yCenter=Math.random()*height;
-                
+            for(var i= 0; i < 700; i++)
+            {           
                 minSize = 5;
                 maxSize = 15;    
         
                 var size = Math.floor(Math.random()*(maxSize-minSize) +minSize);
         
+                xCenter=Math.random()*width;
+                yCenter=Math.random()*height +(height*0.55);
+
                 context.beginPath();
                 context.arc(xCenter, yCenter, size, 0, 2*Math.PI)
                 context.stroke();
                 
-                var rgbR = Math.floor((xCenter/width) * 255),
-                rgbG = rColor,
-                rgbB = Math.floor((yCenter/height) * 255);
+                //var rgbR = Math.floor((xCenter/width) * 255),
+                //rgbG = rColor,
+                //rgbB = Math.floor((yCenter/height) * 255);
         
-                context.fillStyle = 'rgb('+ rgbR + ',' + rgbG +',' + rgbB+')';
+                var rgbR = Math.floor((xCenter/width) * 255),
+                rgbG = Math.floor((yCenter/height) * 255),
+                rgbB = rColor;
+
+                context.fillStyle = 'rgb('+ rgbR + ',' + rgbG +',' + rgbB+ ')';
                 context.fill();
             }
         }
         
         function DrawPentagon()
         {
-            for(var i= 0; i < 500; i++)
+            for(var i= 0; i < 400; i++)
             {
-                var xCenter=Math.random()*width;
-                var yCenter=Math.random()*height;
                 var numberOfSides = 5,
                 step  = 2 * Math.PI / numberOfSides,
                 shift = (Math.PI / 180.0) * -18;
@@ -85,6 +90,8 @@ window.onload = function()
                 minSize = 5;
                 maxSize = 15;
         
+                xCenter=Math.random()*width;
+                yCenter=Math.floor(Math.random()*(height*0.66 -height*0.2)+(height*0.2));
         
                 var size = Math.floor(Math.random()*(maxSize-minSize) +minSize);
         
@@ -96,10 +103,14 @@ window.onload = function()
                 context.closePath();
                 context.stroke();
 
-                var rgbR = rColor,
-                rgbG = Math.floor((xCenter/width) * 255),
-                rgbB = Math.floor((yCenter/height) * 255);
+                //var rgbR = rColor,
+                //rgbG = Math.floor((xCenter/width) * 255),
+                //rgbB = Math.floor((yCenter/height) * 255);
         
+                var rgbR = Math.floor((xCenter/width) * 255),
+                rgbG = Math.floor((yCenter/height) * 255),
+                rgbB = rColor;
+
                 context.fillStyle = 'rgb('+ rgbR + ',' + rgbG +',' + rgbB+')';
                 context.fill();
             }
@@ -107,7 +118,7 @@ window.onload = function()
 
         function RandomColor()
         {
-            rColor = Math.floor((Math.random() * 255));
+            rColor = Math.floor((Math.random() * 255) + 70);
         }
 };
 
