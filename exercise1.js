@@ -6,7 +6,7 @@ window.onload = function()
         height = canvas.height = window.innerHeight,
         minSize, maxSize, rColor;
 
-       
+        RandomColor();
         DrawCircle();
         DrawPentagon();
         DrawTriangle();
@@ -40,7 +40,7 @@ window.onload = function()
 
                var rgbR = Math.floor((x/width) * 255),
                rgbG = Math.floor((y/height) * 255),
-               rgbB = Math.floor((Math.random() * 255));
+               rgbB = rColor;
 
                 context.fillStyle = 'rgb('+ rgbR + ',' + rgbG +',' + rgbB+')';
                 context.fill();
@@ -64,7 +64,7 @@ window.onload = function()
                 context.stroke();
                 
                 var rgbR = Math.floor((xCenter/width) * 255),
-                rgbG = Math.floor((Math.random() * 255)),
+                rgbG = rColor,
                 rgbB = Math.floor((yCenter/height) * 255);
         
                 context.fillStyle = 'rgb('+ rgbR + ',' + rgbG +',' + rgbB+')';
@@ -96,7 +96,7 @@ window.onload = function()
                 context.closePath();
                 context.stroke();
 
-                var rgbR = Math.floor((Math.random() * 255)),
+                var rgbR = rColor,
                 rgbG = Math.floor((xCenter/width) * 255),
                 rgbB = Math.floor((yCenter/height) * 255);
         
