@@ -19,7 +19,7 @@ window.onload = function()
                 var x=Math.random()*width;
                 var y=Math.random()*height;
         
-                minSize = 10;
+                minSize = 15;
                 maxSize = 50;
                 
                 var size = Math.floor(Math.random()*(maxSize-minSize) +minSize);
@@ -54,7 +54,7 @@ window.onload = function()
                 var xCenter=Math.random()*width;
                 var yCenter=Math.random()*height;
                 
-                minSize = 2;
+                minSize = 5;
                 maxSize = 15;    
         
                 var size = Math.floor(Math.random()*(maxSize-minSize) +minSize);
@@ -82,7 +82,7 @@ window.onload = function()
                 step  = 2 * Math.PI / numberOfSides,
                 shift = (Math.PI / 180.0) * -18;
         
-                minSize = 2;
+                minSize = 5;
                 maxSize = 15;
         
         
