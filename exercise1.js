@@ -25,6 +25,7 @@ window.onload = function()
                 minSize = 15;
                 maxSize = 50;
                 
+                //how far away lines can end from starting point
                 var size = Math.floor(Math.random()*(maxSize-minSize) +minSize);
                 size *= Math.floor(Math.random()*2) == 1 ? 1 : -1;
         
