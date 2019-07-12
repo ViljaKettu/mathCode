@@ -13,7 +13,6 @@ window.onload = function()
 
         renderCircle();
         
-
         function renderCircle()
         {
             context.clearRect(0, 0, width, height);
@@ -36,30 +35,6 @@ window.onload = function()
             angle += speed;
             requestAnimationFrame(renderCircle);
 
-            renderCircle2();
         }
 
-        function renderCircle2()
-        {
-            context.clearRect(0, 0, width, height);
-
-            var radius2 = 200;
-
-            x= centerX + Math.cos(angle2) * radius2;
-            y = centerY + Math.sin(angle2) * radius2;
-            context.beginPath();
-            context.arc(x, y, 35, 0, Math.PI * 2, false);
-
-            var rgbR = Math.floor((x/width) * 255),
-               rgbG = Math.floor((y/height) * 255),
-               rgbB = 100;
-
-            context.fillStyle = 'rgb('+ rgbR + ',' + rgbG +',' + rgbB+')';
-
-            context.fill();
-
-            angle2 += speed;
-            requestAnimationFrame(renderCircle2);
-        }
-        
 };
