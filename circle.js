@@ -9,7 +9,7 @@ window.onload = function()
         centerY = height/2,
         radius = 400,
         angle = 0,
-        numObjects = 10,
+        numObjects = 20,
         speed = 0.1,
         slice = Math.PI * 2/ numObjects,
         x,y;
